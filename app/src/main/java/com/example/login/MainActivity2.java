@@ -1,7 +1,9 @@
 package com.example.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +18,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.login.databinding.ActivityMain2Binding;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMain2Binding binding;
@@ -46,6 +48,10 @@ public class MainActivity2 extends AppCompatActivity {
 
         Toast toast = Toast.makeText(this,"Bienvenido "+Bienvenida,Toast.LENGTH_LONG);
         toast.show();
+
+        FloatingActionButton volver = (FloatingActionButton) findViewById(R.id.Atras);
+
+        volver.setOnClickListener(this);
     }
 
     @Override
@@ -53,5 +59,11 @@ public class MainActivity2 extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
     }
 }
