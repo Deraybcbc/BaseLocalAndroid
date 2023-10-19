@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context="com.example.login.MainActivity">
+    <!--tools:context=".FirstFragment">-->
+
 
     <TextView
         android:id="@+id/lista"
@@ -35,10 +37,10 @@
         app:layout_constraintVertical_bias="0.916" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/Nissan"
         android:layout_width="155dp"
         android:layout_height="93dp"
-        android:src="@drawable/baixa"
+        android:src="@drawable/nissan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.102"
@@ -47,10 +49,10 @@
         app:layout_constraintVertical_bias="0.214" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/Supra"
         android:layout_width="151dp"
         android:layout_height="106dp"
-        android:src="@drawable/baixa__1_"
+        android:src="@drawable/supra"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
@@ -59,18 +61,16 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/Mazda"
         android:layout_width="156dp"
         android:layout_height="113dp"
-        android:src="@drawable/baixa__1_"
+        android:src="@drawable/mazda"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76"
-        app:srcCompat="@drawable/c4525b6e_baf0_4650_8839_e5c27f5ad83f" />
-
+        app:layout_constraintVertical_bias="0.76"/>
     <TextView
         android:id="@+id/textofoto1"
         android:layout_width="183dp"
@@ -80,7 +80,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.738"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/Mazda"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.743" />
 
@@ -92,7 +92,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.837"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/Supra"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.494" />
 
@@ -104,7 +104,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/Nissan"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.215" />
 

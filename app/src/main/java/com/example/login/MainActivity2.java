@@ -9,6 +9,8 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.navigation.NavController;
@@ -44,6 +46,20 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
             }
         });
 
+        /*
+        ImageView imagen = findViewById(R.id.Nissan);
+
+        // Configura un OnClickListener para el ImageView
+        imagen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Código a ejecutar cuando se hace clic en la imagen
+                Toast.makeText(MainActivity2.this, "Es un Nissan Skyline", Toast.LENGTH_SHORT).show();
+            }
+        });*/
+
+
+
         String Bienvenida = getIntent().getStringExtra("Usuario");
 
         Toast toast = Toast.makeText(this,"Bienvenido "+Bienvenida,Toast.LENGTH_LONG);
@@ -52,7 +68,13 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         FloatingActionButton volver = (FloatingActionButton) findViewById(R.id.Atras);
 
         volver.setOnClickListener(this);
+
+        Button boto = (Button) findViewById(R.id.button_first);
+
+        boto.setOnClickListener(this::onClick);
     }
+
+
 
     @Override
     public boolean onSupportNavigateUp() {
@@ -65,5 +87,10 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
+
+        Intent intent2 = new Intent(this,formulario.class);
+        startActivity(intent2);
+
     }
+
 }
