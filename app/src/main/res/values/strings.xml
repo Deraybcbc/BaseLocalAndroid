@@ -18,6 +18,8 @@
     <string name="Heli">Helicoptero</string>
     <string name="Pais">País</string>
     <string name="Opcion">Elige</string>
+    <string name="Fecha">Fecha de nacimiento</string>
+    <string name="Enviar">Enviar</string>
 
     <string name="title_activity_main2">MainActivity2</string>
     <!-- Strings used for fragments for navigation -->
