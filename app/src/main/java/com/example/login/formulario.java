@@ -65,13 +65,7 @@ public class formulario extends AppCompatActivity implements View.OnClickListene
         //MENU
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-/*
-        //Para mostrar los Productos con el RecyclerView
-        recyclerViewClientes = (RecyclerView) findViewById(R.id.Form);
-        recyclerViewClientes.setLayoutManager(new LinearLayoutManager(formulario.this));
-        AdaptadorClientes = new RecyclerViewAdaptadorClientes();
-        recyclerViewClientes.setAdapter(AdaptadorClientes);
-*/
+
         SpinnerPais();
 
         botonCalendar = (ImageButton) findViewById(R.id.imagenCalendar);
