@@ -110,6 +110,11 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 Intent intent1 = new Intent(this, formulario.class);
                 startActivity(intent1);
                 return true;
+            case R.id.Select:
+                // Acción para la "Opción 1"
+                Intent intent2 = new Intent(this, SELECT.class);
+                startActivity(intent2);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

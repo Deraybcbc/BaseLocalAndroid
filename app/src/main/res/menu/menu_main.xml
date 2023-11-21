@@ -9,5 +9,8 @@
         android:title="Formulario"
         android:orderInCategory="100"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/Select"
+        android:title="Select" />
 
 </menu>

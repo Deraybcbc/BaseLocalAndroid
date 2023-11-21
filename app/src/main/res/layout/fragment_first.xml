@@ -93,7 +93,7 @@
         app:layout_constraintVertical_bias="0.743" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/Cognom"
         android:layout_width="191dp"
         android:layout_height="100dp"
         android:text="@string/supra"
@@ -105,7 +105,7 @@
         app:layout_constraintVertical_bias="0.494" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Direccion"
         android:layout_width="170dp"
         android:layout_height="92dp"
         android:text="@string/nissan"

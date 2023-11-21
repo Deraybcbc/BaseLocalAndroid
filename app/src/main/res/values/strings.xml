@@ -20,6 +20,15 @@
     <string name="Opcion">Elige</string>
     <string name="Fecha">Fecha de nacimiento</string>
     <string name="Enviar">Enviar</string>
+    <string name="Direccion">Direccion</string>
+    <string name="Tel">Telefono</string>
+    <string name="Tipo">Tipo</string>
+    <string name="Opcion1">Domicili</string>
+    <string name="Opcion2">Recollida a botiga</string>
+    <string name="Registro">Registro</string>
+
+    <string name="Aceptar">Aceptar</string>
+    <string name="Eliminar">Eliminar</string>
 
     <string name="title_activity_main2">MainActivity2</string>
     <!-- Strings used for fragments for navigation -->
