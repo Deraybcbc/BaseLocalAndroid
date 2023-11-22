@@ -99,7 +99,7 @@ public class formulario extends AppCompatActivity implements View.OnClickListene
                 else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(formulario.this);
                     builder.setTitle("Formulario");
-                    builder.setMessage("Nombre: " + nom + "\n" + "Apellido: " + apellido + "\n" + "Genero: " + OpcionSeleccionada(Generos) + "Spinner: " + paisSeleccionado + "\n" + "Fecha de Nacimiento: " + fechas+dire+tele);
+                    builder.setMessage("Nombre: " + nom + "\n" + "Apellido: " + apellido + "\n" + "Genero: " + OpcionSeleccionada(Generos) + "Spinner: " + paisSeleccionado + "\n" + "Fecha de Nacimiento: " + fechas+"\n"+"Direccion: "+dire+"\n"+"Telefono: "+tele);
 
                     // Agregar botones y lógica para manejar los clics
                     builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
@@ -111,7 +111,7 @@ public class formulario extends AppCompatActivity implements View.OnClickListene
                             //Intent intent = new Intent(formulario.this, MainActivity2.class);
                             // Iniciar la nueva actividad
                             //startActivity(intent);
-                            insertarCliente(nom,apellido,dire,OpcionSeleccionada(Generos),paisSeleccionado,tele,fechas);
+                            dbHelper.insertarCliente(nom,apellido,dire,OpcionSeleccionada(Generos),paisSeleccionado,tele,fechas);
                             Toast.makeText(formulario.this, "CLIENTE AGREGADO EXITOSAMENTE", Toast.LENGTH_SHORT).show();
                             dialog.dismiss();
                         }
@@ -142,33 +142,6 @@ public class formulario extends AppCompatActivity implements View.OnClickListene
 
     }
 
-    private void insertarCliente(String nombre, String apellido, String direccion,String genero,String Pais, String telefono, String fecha) {
-        try {
-            ContentValues values = new ContentValues();
-            values.put("nombre_cliente", nombre);
-            values.put("apellido", apellido);
-            values.put("apellido", apellido);
-            values.put("direccion", direccion);
-            values.put("genero", genero);
-            values.put("pais", Pais);
-            values.put("telefono", telefono);
-            values.put("fecha", fecha);
-
-            long idCliente = database.insert("CLIENTE", null, values);
-
-            if (idCliente != -1) {
-                // La inserción fue exitosa
-                // "idCliente" contiene el valor de la clave primaria del nuevo cliente
-                Log.d("INSERT","INSERT EXITOSO");
-            } else {
-                // La inserción falló
-                Log.d("INSERT","INSERT FALLIOD");
-            }
-        } catch (SQLException e) {
-            // Manejar excepciones, por ejemplo, si hay un error de base de datos
-            e.printStackTrace();
-        }
-    }
 
     public void SpinnerPais(){
         spinner = findViewById(R.id.paises);
@@ -200,6 +173,15 @@ public class formulario extends AppCompatActivity implements View.OnClickListene
             }
         });
     }
+
+    //ACCION DE FLECHA
+    @Override
+    public boolean onSupportNavigateUp() {
+        Intent intent = new Intent(this, MainActivity2.class);
+        startActivity(intent);
+        return true;
+    }
+
 
     private void ObtenerFecha() {
         /*
@@ -294,6 +276,11 @@ public class formulario extends AppCompatActivity implements View.OnClickListene
                 // Acción para la "Opción 1"
                 Intent intent2 = new Intent(this, SELECT.class);
                 startActivity(intent2);
+                return true;
+            case R.id.SelectAll:
+                // Acción para la "Opción 1"
+                Intent intent3 = new Intent(this, SelectAll.class);
+                startActivity(intent3);
                 return true;
         }
 

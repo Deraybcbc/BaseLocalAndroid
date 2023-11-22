@@ -12,6 +12,9 @@
         android:theme="@style/Theme.LOGIN"
         tools:targetApi="31">
         <activity
+            android:name=".SelectAll"
+            android:exported="false" />
+        <activity
             android:name=".SELECT"
             android:exported="false" />
         <activity

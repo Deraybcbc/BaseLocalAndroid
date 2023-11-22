@@ -9,27 +9,21 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
-public class SELECT extends AppCompatActivity {
+public class SelectAll extends AppCompatActivity {
 
-    private RecyclerView recyclerViewClientes;
-    private RecyclerViewAdaptadorClientes adaptadorClientes;
-    private DatabaseHelper databaseHelper;
+    private RecyclerView recyclerViewAll;
+    private RecyclerViewAdaptadorAll adaptadorAll;
+
     private List<Clientes> clientes;
     private SQLiteDatabase database;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select);
+        setContentView(R.layout.activity_select_all);
 
         //MENU
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -38,35 +32,12 @@ public class SELECT extends AppCompatActivity {
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         database = dbHelper.getWritableDatabase();
 
-        FloatingActionButton boton = (FloatingActionButton) findViewById(R.id.FiltrarID);
-        boton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                EditText Buscarid = (EditText) findViewById(R.id.BuscarID);
-                String idTexto = Buscarid.getText().toString();
-                System.out.println("ID: " + idTexto);
-                if (!idTexto.isEmpty()) {
-                    int id = Integer.parseInt(idTexto);
+        clientes = dbHelper.SelectAll();
 
-                    clientes = (List<Clientes>) dbHelper.SelectFiltro(id);
-
-                    if(!clientes.isEmpty()){
-                        //Para mostrar los Productos con el RecyclerView
-                        recyclerViewClientes = (RecyclerView) findViewById(R.id.Form);
-                        recyclerViewClientes.setLayoutManager(new LinearLayoutManager(SELECT.this));
-                        adaptadorClientes = new RecyclerViewAdaptadorClientes(clientes);
-                        recyclerViewClientes.setAdapter(adaptadorClientes);
-                    }else{
-                        Toast.makeText(SELECT.this, "No hay ningun usuario con ese ID", Toast.LENGTH_SHORT).show();
-                    }
-
-
-                } else {
-                    Toast.makeText(SELECT.this, "Ingrese un id", Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
+        recyclerViewAll = (RecyclerView) findViewById(R.id.All);
+        recyclerViewAll.setLayoutManager(new LinearLayoutManager(this));
+        adaptadorAll = new RecyclerViewAdaptadorAll(clientes);
+        recyclerViewAll.setAdapter(adaptadorAll);
 
     }
 

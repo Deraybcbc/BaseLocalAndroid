@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <string name="app_name">ANMELDUNG</string>
+        <string name="nombre_usuario">Benutzername</string>
+        <string name="contraseña">Passwort</string>
+
+        <string name="tituloLista">LISTE</string>
+        <string name="foto1">Etwas Erklärung</string>
+
+        <string name="nissan">Der GT-R erzeugt 570 PS (562 HP; 419 kW) und 65 kg·m (637 N·m; 470 lb·ft) auf allen vier Rädern.</string>
+        <string name="supra">Er entwickelt eine Leistung von 330 PS und ein Drehmoment von 440 Nm, wie im Video angegeben.</string>
+        <string name="mazda">Der Mazda RX-7 hatte mechanisch einen 2-Rotor-Wankelmotor mit 1,3 Litern, der mit einer Leistung von 255 PS startete.</string>
+
+        <string name="Nombre">Name</string>
+        <string name="Apellido">Nachname</string>
+        <string name="Genero">Geschlecht</string>
+        <string name="Masc">Männlich</string>
+        <string name="Fem">Weiblich</string>
+        <string name="Heli">Hubschrauber</string>
+        <string name="Pais">Land</string>
+        <string name="Opcion">Wählen</string>
+        <string name="Fecha">Geburtsdatum</string>
+        <string name="Enviar">Senden</string>
+        <string name="Direccion">Adresse</string>
+        <string name="Tel">Telefon</string>
+        <string name="Tipo">Typ</string>
+        <string name="Opcion1">Zuhause</string>
+        <string name="Opcion2">Abholung im Laden</string>
+        <string name="Registro">Registrierung</string>
+
+        <string name="ID">Geben Sie die zu suchende ID ein</string>
+
+        <string name="Aceptar">Akzeptieren</string>
+        <string name="Eliminar">Löschen</string>
+
+        <string name="title_activity_main2">MainActivity2</string>
+        <!-- Strings used for fragments for navigation -->
+        <string name="first_fragment_label">Erstes Fragment</string>
+        <string name="second_fragment_label">Zweites Fragment</string>
+        <string name="next">FORMULAR</string>
+        <string name="previous">Vorherige</string>
+
+        <string name="hello_first_fragment">Hallo erstes Fragment</string>
+        <string name="hello_second_fragment">Hallo zweites Fragment. Argument: %1$s</string>
+
+</resources>

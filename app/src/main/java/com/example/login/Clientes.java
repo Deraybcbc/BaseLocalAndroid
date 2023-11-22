@@ -1,25 +1,36 @@
 package com.example.login;
 
 public class Clientes {
+private int id_cliente;
+    private String nombre_cliente,apellido,direccion,genero,pais,telefono,fecha,fechaRegistro;
 
-    private String nom,apellido,direccion,telefono,opcion,tipo;
 
-
-    public Clientes(String nom, String apellido, String direccion, String telefono, String opcion, String tipo) {
-        this.nom = nom;
+    public Clientes(int id_cliente, String nombre_cliente, String apellido, String direccion, String genero, String pais, String telefono, String fecha, String fechaRegistro) {
+        this.id_cliente = id_cliente;
+        this.nombre_cliente = nombre_cliente;
         this.apellido = apellido;
         this.direccion = direccion;
+        this.genero = genero;
+        this.pais = pais;
         this.telefono = telefono;
-        this.opcion = opcion;
-        this.tipo = tipo;
+        this.fecha = fecha;
+        this.fechaRegistro = fechaRegistro;
     }
 
-    public String getNom() {
-        return nom;
+    public int getId_cliente() {
+        return id_cliente;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setId_cliente(int id_cliente) {
+        this.id_cliente = id_cliente;
+    }
+
+    public String getNombre_cliente() {
+        return nombre_cliente;
+    }
+
+    public void setNombre_cliente(String nombre_cliente) {
+        this.nombre_cliente = nombre_cliente;
     }
 
     public String getApellido() {
@@ -38,6 +49,22 @@ public class Clientes {
         this.direccion = direccion;
     }
 
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
     public String getTelefono() {
         return telefono;
     }
@@ -46,19 +73,19 @@ public class Clientes {
         this.telefono = telefono;
     }
 
-    public String getOpcion() {
-        return opcion;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setOpcion(String opcion) {
-        this.opcion = opcion;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getFechaRegistro() {
+        return fechaRegistro;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setFechaRegistro(String fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
     }
 }

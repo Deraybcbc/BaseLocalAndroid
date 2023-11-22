@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تسجيل الدخول</string>
+    <string name="nombre_usuario">اسم المستخدم</string>
+    <string name="contraseña">كلمة المرور</string>
+
+    <string name="tituloLista">قائمة</string>
+    <string name="foto1">شرح بسيط</string>
+
+    <string name="nissan">تنتج سيارة GT-R 570 حصانًا (562 حصانًا; 419 كيلوواط) و 65 كجم·م (637 نيوتن·متر; 470 رطل·قدم) على جميع العجلات.</string>
+    <string name="supra">تطور قوة 330 حصانًا وعزم دوران 440 نيوتن·متر، كما هو موضح في الفيديو.</string>
+    <string name="mazda">ميكانيكيًا، كان لدى Mazda RX-7 محرك دوراني من 2 روتور وسعة 1.3 لتر يبدأ بقوة 255 حصانًا.</string>
+
+    <string name="Nombre">الاسم</string>
+    <string name="Apellido">اللقب</string>
+    <string name="Genero">الجنس</string>
+    <string name="Masc">ذكر</string>
+    <string name="Fem">أنثى</string>
+    <string name="Heli">طائرة هليكوبتر</string>
+    <string name="Pais">البلد</string>
+    <string name="Opcion">اختر</string>
+    <string name="Fecha">تاريخ الميلاد</string>
+    <string name="Enviar">إرسال</string>
+    <string name="Direccion">العنوان</string>
+    <string name="Tel">الهاتف</string>
+    <string name="Tipo">النوع</string>
+    <string name="Opcion1">منزل</string>
+    <string name="Opcion2">جمع من المتجر</string>
+    <string name="Registro">التسجيل</string>
+
+    <string name="ID">أدخل الرقم التعريفي للبحث</string>
+
+    <string name="Aceptar">موافق</string>
+    <string name="Eliminar">حذف</string>
+
+    <string name="title_activity_main2">MainActivity2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">الجزء الأول</string>
+    <string name="second_fragment_label">الجزء الثاني</string>
+    <string name="next">النموذج</string>
+    <string name="previous">السابق</string>
+
+    <string name="hello_first_fragment">مرحبًا بك في الجزء الأول</string>
+    <string name="hello_second_fragment">مرحبًا بك في الجزء الثاني. الوسيط: %1$s</string>
+</resources>

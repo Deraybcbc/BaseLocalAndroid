@@ -10,22 +10,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+public class RecyclerViewAdaptadorAll extends RecyclerView.Adapter<RecyclerViewAdaptadorAll.ViewHolder> {
 
-public class RecyclerViewAdaptadorClientes extends RecyclerView.Adapter<RecyclerViewAdaptadorClientes.ViewHolder> {
-
-    private List<Clientes> listaClients;
+    private List<Clientes> TotalClientes;
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lista_clientes, parent, false);
+    public RecyclerViewAdaptadorAll.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lista_all,parent,false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(RecyclerViewAdaptadorClientes.ViewHolder holder, int position) {
-        Clientes clientes = listaClients.get(position);
+    public void onBindViewHolder(@NonNull RecyclerViewAdaptadorAll.ViewHolder holder, int position) {
+        Clientes clientes = TotalClientes.get(position);
 
+        holder.infoID.setText("ID USUARIO "+String.valueOf(clientes.getId_cliente()));
         holder.infoNom.setText(clientes.getNombre_cliente());
         holder.infoApe.setText(clientes.getApellido());
         holder.infoDire.setText(clientes.getDireccion());
@@ -34,24 +34,23 @@ public class RecyclerViewAdaptadorClientes extends RecyclerView.Adapter<Recycler
         holder.infopais.setText(clientes.getPais());
         holder.infoDate.setText(clientes.getFecha());
         holder.infoRegsitro.setText(clientes.getFechaRegistro());
-
     }
 
-    public RecyclerViewAdaptadorClientes(List<Clientes> listaClients) {
-        this.listaClients = listaClients;
+    public RecyclerViewAdaptadorAll (List<Clientes> listaClientes){
+        this.TotalClientes = listaClientes;
     }
 
     @Override
     public int getItemCount() {
-        return listaClients.size();
+        return TotalClientes.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView infoNom,infoApe,infoDire,infogenero,infopais,infoDate,infoRegsitro,infotel;
-
+        private TextView infoID,infoNom,infoApe,infoDire,infogenero,infopais,infoDate,infoRegsitro,infotel;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            infoID = (TextView) itemView.findViewById(R.id.Id_cli);
             infoNom = (TextView) itemView.findViewById(R.id.InfoNom);
             infoApe = (TextView) itemView.findViewById(R.id.infoApe);
             infoDire = (TextView) itemView.findViewById(R.id.infoDire);
@@ -60,7 +59,6 @@ public class RecyclerViewAdaptadorClientes extends RecyclerView.Adapter<Recycler
             infopais = (TextView) itemView.findViewById(R.id.infoPais);
             infoDate = (TextView) itemView.findViewById(R.id.infoDate);
             infoRegsitro = (TextView) itemView.findViewById(R.id.infoRegistro);
-
         }
     }
 }
